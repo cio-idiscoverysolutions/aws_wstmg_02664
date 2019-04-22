@@ -10,7 +10,65 @@ datagroup: aws_wstmg_02664_default_datagroup {
 
 persist_with: aws_wstmg_02664_default_datagroup
 
-explore: gps {}
+explore: evt {}
+
+explore: loc {}
+
+
+explore: ppl {}
+
+explore: cda {}
+
+explore: cda_results {
+  join: cda{
+    type: inner
+    sql_on: ${cda.cda_id} = ${cda.cda_id};;
+    relationship: many_to_one
+    view_label: "CDA Results"
+
+  }
+}
+
+
+explore: udf {
+  label: "Universal Data Format"
+  join: ppl{
+    type: left_outer
+    sql_on: ${udf.ppl_id} = ${ppl.ppl_id} ;;
+    relationship: one_to_many
+    view_label: "People"
+
+  }
+
+  join: loc{
+    type: left_outer
+    sql_on: ${udf.loc_id} = ${loc.loc_id} ;;
+    relationship: one_to_many
+    view_label: "Location"
+  }
+  join: evt{
+    type: left_outer
+    sql_on: ${udf.evt_id} = ${evt.evt_id} ;;
+    relationship: one_to_many
+    view_label: "Event"
+  }
+  join: src{
+    type: left_outer
+    sql_on: ${udf.src_id} = ${src.src_id} ;;
+    relationship: one_to_many
+  }
+  join: cda_results{
+    type: left_outer
+    sql_on: ${udf.udf_id} = ${cda_results.udf_id} ;;
+    relationship: many_to_many
+  }
+  join: cda{
+    type: left_outer
+    sql_on: ${udf.udf_id} = ${cda_results.udf_id} AND ${cda_results.cda_id} = ${cda.cda_id} ;;
+    relationship: many_to_many
+  }
+}
+
 
 #   joins:
 #     - join: gps

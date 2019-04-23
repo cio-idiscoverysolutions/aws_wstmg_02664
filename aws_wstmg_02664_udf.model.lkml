@@ -10,10 +10,15 @@ datagroup: aws_wstmg_02664_default_datagroup {
 
 persist_with: aws_wstmg_02664_default_datagroup
 
+explore: avg_daily_hours {}
+explore: avg_weekly_hours {}
+explore: days {}
+explore: weeks {}
+
+
 explore: evt {}
 
 explore: loc {}
-
 
 explore: ppl {}
 

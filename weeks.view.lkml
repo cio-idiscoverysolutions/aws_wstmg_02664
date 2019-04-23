@@ -27,11 +27,15 @@ view: weeks {
 
   measure: count {
     type: count
-    drill_fields: [full_name]
+    drill_fields: [full_name,ddate_date,wk_day]
   }
 
   measure: wkDay {
     type: sum
-    drill_fields: [full_name]
+    drill_fields: [full_name,ddate_date,wk_day]
   }
+
+  measure: hrsTier
+  { type: sum
+    drill_fields: [full_name,ddate_date,wk_day]}
 }

@@ -29,4 +29,9 @@ view: weeks {
     type: count
     drill_fields: [full_name]
   }
+
+  measure: wkDay {
+    type: sum
+    drill_fields: [full_name]
+  }
 }

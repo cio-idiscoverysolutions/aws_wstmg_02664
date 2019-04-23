@@ -36,6 +36,6 @@ view: weeks {
   }
 
   dimension: hrsTier
-  { type: string
+  { type: number
     sql: ${TABLE}.hrsTier ;;}
 }

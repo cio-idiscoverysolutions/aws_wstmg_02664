@@ -36,7 +36,7 @@ view: days {
     drill_fields: [full_name,ddate_date,wk_day]
   }
 
-  measure: hrsTier
-  { type: sum
-    drill_fields: [full_name,ddate_date,wk_day]}
+  dimension: hrsTier
+  { type: string
+    sql: ${TABLE}.hrsTier ;;}
 }

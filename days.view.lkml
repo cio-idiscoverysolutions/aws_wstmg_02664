@@ -39,4 +39,8 @@ view: days {
   dimension: hrsTier
   { type: number
     sql: ${TABLE}.hrsTier ;;}
+
+  dimension: hrsLabel
+  { type: string
+    sql: ${TABLE}.hrsLabel ;;}
 }

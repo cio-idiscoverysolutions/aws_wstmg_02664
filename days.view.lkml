@@ -36,6 +36,11 @@ view: days {
     drill_fields: [full_name,ddate_date,wk_day]
   }
 
+  measure: WkDay {
+    type: average
+    drill_fields: [full_name,ddate_date,wk_day]
+  }
+
   dimension: hrsTier
   { type: number
     sql: ${TABLE}.hrsTier ;;}

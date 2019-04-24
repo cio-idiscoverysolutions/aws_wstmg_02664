@@ -17,11 +17,8 @@ explore: weeks {}
 
 
 explore: evt {}
-
 explore: loc {}
-
 explore: ppl {}
-
 explore: cda {}
 
 explore: cda_results {

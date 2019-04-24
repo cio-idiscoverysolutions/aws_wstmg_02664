@@ -21,6 +21,8 @@ explore: loc {}
 explore: ppl {}
 explore: cda {}
 
+explore: i_ds_gps_data {}
+
 explore: cda_results {
   join: cda{
     type: inner

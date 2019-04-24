@@ -22,6 +22,7 @@ explore: ppl {}
 explore: cda {}
 
 explore: i_ds_gps_data {}
+explore: i_ds_gps_data_anchors_of_interest {}
 
 explore: cda_results {
   join: cda{

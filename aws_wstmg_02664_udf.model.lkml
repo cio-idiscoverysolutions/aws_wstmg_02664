@@ -14,7 +14,7 @@ explore: avg_daily_hours {}
 explore: avg_weekly_hours {}
 explore: days {}
 explore: weeks {}
-
+explore: kronos_breaks_taken {}
 
 explore: evt {}
 explore: loc {}

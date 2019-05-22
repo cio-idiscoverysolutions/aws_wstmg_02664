@@ -28,8 +28,8 @@ view: test_gpswhen_idle {
 
   dimension: gps_location {
     type: location
-    sql_latitude: ${TABLE}.{Latitude} ;;
-    sql_longitude: ${TABLE}.{Longitude} ;;
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
   }
 
   measure: count {

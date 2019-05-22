@@ -26,6 +26,12 @@ view: test_gpswhen_idle {
     sql: ${TABLE}.Longitude ;;
   }
 
+  dimension: gps_location {
+    type: location
+    sql_latitude: ${TABLE}.{Latitude} ;;
+    sql_longitude: ${TABLE}.{Longitude} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [driver_name]

@@ -39,6 +39,12 @@ view: test_gpson_break {
     sql: ${TABLE}.lon ;;
   }
 
+  dimension: gps_location {
+    type: location
+    sql_latitude: ${lat} ;;
+    sql_longitude: ${lon} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []

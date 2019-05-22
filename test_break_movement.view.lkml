@@ -49,13 +49,13 @@ view: test_break_movement {
   dimension: start {
     type:  location
     sql_latitude: ${start_lat} ;;
-    sql_longitude: $(${start_lon} ;;
+    sql_longitude: ${start_lon} ;;
   }
 
   dimension: stop {
     type:  location
     sql_latitude: ${stop_lat} ;;
-    sql_longitude: $(${stop_lon} ;;
+    sql_longitude: ${stop_lon} ;;
   }
 
   measure: count {

@@ -17,6 +17,7 @@ explore: weeks {}
 explore: kronos_breaks_taken {}
 explore: test_gpson_break {}
 explore: test_gpswhen_idle {}
+explore: test_break_movement {}
 
 explore: evt {}
 explore: loc {}

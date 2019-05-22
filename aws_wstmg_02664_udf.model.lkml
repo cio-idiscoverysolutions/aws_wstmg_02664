@@ -15,6 +15,8 @@ explore: avg_weekly_hours {}
 explore: days {}
 explore: weeks {}
 explore: kronos_breaks_taken {}
+explore: test_gpson_break {}
+explore: test_gpswhen_idle {}
 
 explore: evt {}
 explore: loc {}

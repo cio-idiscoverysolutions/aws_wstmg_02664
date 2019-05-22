@@ -14,7 +14,7 @@ view: test_break_movement {
     convert_tz: no
     datatype: date
     sql: ${TABLE}.breakDay ;;
-
+    drill_fields: [break_day_date, break_duration, movement_duration, start_lat, start_lon, stop_lat, stop_lon]
   }
 
   dimension: break_duration {

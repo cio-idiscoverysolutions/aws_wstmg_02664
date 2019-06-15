@@ -24,6 +24,8 @@ explore: loc {}
 explore: ppl {}
 explore: cda {}
 
+explore: xiotchart {}
+
 explore: i_ds_gps_data {}
 explore: i_ds_gps_data_anchors_of_interest {}
 

@@ -20,3 +20,7 @@ include: "*.view.lkml"                       # include all views in this project
 explore: cdf_stats {}
 explore: table_stats {}
 explore: custodian_counts {}
+explore: cdf_gpsidle_master {}
+explore: cdf_gpsping_master {}
+explore: cdf_opus_master {}
+explore: cdf_kronos_master {}

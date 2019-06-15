@@ -27,13 +27,31 @@ view: cdf_gpsidle_master {
     sql: ${TABLE}.Driver_Name ;;
   }
 
-  dimension: idle_finished {
-    type: string
+  dimension_group: idle_finished {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.Idle_Finished ;;
   }
 
-  dimension: idle_started {
-    type: string
+  dimension_group: idle_started {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.Idle_Started ;;
   }
 

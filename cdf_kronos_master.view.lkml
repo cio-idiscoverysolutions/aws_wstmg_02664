@@ -27,8 +27,17 @@ view: cdf_kronos_master {
     sql: ${TABLE}.ENTEREDONDTM ;;
   }
 
-  dimension: eventdate {
-    type: date
+  dimension_group: eventdate {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.EVENTDATE ;;
   }
 
@@ -49,8 +58,17 @@ view: cdf_kronos_master {
     sql: ${TABLE}.INPunchRounded ;;
   }
 
-  dimension: inpunchactual {
-    type: date_time
+  dimension_group: inpunchactual {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.INPUNCHActual ;;
   }
 
@@ -99,8 +117,17 @@ view: cdf_kronos_master {
     sql: ${TABLE}.OutPunchRounded ;;
   }
 
-  dimension: outpunchactual {
-    type: date_time
+  dimension_group: outpunchactual {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.OUTPUNCHActual ;;
   }
 

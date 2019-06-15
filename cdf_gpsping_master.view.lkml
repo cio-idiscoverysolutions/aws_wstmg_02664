@@ -17,8 +17,17 @@ view: cdf_gpsping_master {
     sql: ${TABLE}.DRIVER_NAME ;;
   }
 
-  dimension: gpstime {
-    type: string
+  dimension_group: gpstime {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.GPSTIME ;;
   }
 

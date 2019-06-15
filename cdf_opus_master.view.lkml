@@ -1,8 +1,17 @@
 view: cdf_opus_master {
   sql_table_name: dbo.CDF_OPUS_Master ;;
 
-  dimension: arrive_yard {
-    type: string
+  dimension_group: arrive_yard {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.ARRIVE_YARD ;;
   }
 
@@ -27,13 +36,31 @@ view: cdf_opus_master {
     sql: ${TABLE}.DRIVER_ID ;;
   }
 
-  dimension: driver_lunch_end {
-    type: string
+  dimension_group: driver_lunch_end {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.DRIVER_LUNCH_END ;;
   }
 
-  dimension: driver_lunch_start {
-    type: string
+  dimension_group: driver_lunch_start {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.DRIVER_LUNCH_START ;;
   }
 
@@ -42,8 +69,17 @@ view: cdf_opus_master {
     sql: ${TABLE}.DRIVER_NAME ;;
   }
 
-  dimension: leave_yard {
-    type: string
+  dimension_group: leave_yard {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year,day_of_week
+    ]
     sql: ${TABLE}.LEAVE_YARD ;;
   }
 

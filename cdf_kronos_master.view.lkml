@@ -28,7 +28,7 @@ view: cdf_kronos_master {
   }
 
   dimension: eventdate {
-    type: string
+    type: date
     sql: ${TABLE}.EVENTDATE ;;
   }
 
@@ -50,7 +50,7 @@ view: cdf_kronos_master {
   }
 
   dimension: inpunchactual {
-    type: string
+    type: date_time
     sql: ${TABLE}.INPUNCHActual ;;
   }
 
@@ -100,7 +100,7 @@ view: cdf_kronos_master {
   }
 
   dimension: outpunchactual {
-    type: string
+    type: date_time
     sql: ${TABLE}.OUTPUNCHActual ;;
   }
 
